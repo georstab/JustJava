@@ -10,6 +10,8 @@ public class MainActivity extends AppCompatActivity {
 
     int numberOfCoffes=0;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void decr_but(View view){
         numberOfCoffes=numberOfCoffes-1;
+        numberOfCoffes = numberOfCoffes < 0? 0 : numberOfCoffes;
         display(numberOfCoffes);
         displayPrice(numberOfCoffes*5);
     }
