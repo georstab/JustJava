@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Just Java</string>
-    <string name="but_text">Order</string>
+    <string name="but_text_order">Order</string>
+    <string name="but_text_incr">+</string>
+    <string name="but_text_decr">-</string>
+
 </resources>

@@ -8,6 +8,8 @@ import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
 
+    int numberOfCoffes=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +20,24 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int numberOfCoffes=4;
+
+
+    }
+
+    /**
+     * This is the INCR_BUT
+     */
+    public void incr_but(View view){
+        numberOfCoffes=numberOfCoffes+1;
+        display(numberOfCoffes);
+        displayPrice(numberOfCoffes*5);
+    }
+
+    /**
+     * This is the DECR_BUT
+     */
+    public void decr_but(View view){
+        numberOfCoffes=numberOfCoffes-1;
         display(numberOfCoffes);
         displayPrice(numberOfCoffes*5);
     }
@@ -30,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
         quantityTextView.setText("" + number);
     }
+
     /**
      * This method displays the given price on the screen.
      */
@@ -37,5 +57,9 @@ public class MainActivity extends AppCompatActivity {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
     }
+
+
+
+
 
 }
