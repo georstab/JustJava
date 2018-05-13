@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-
-
+        String priceMessage="Thank you for your order \nTotal:$"+(numberOfCoffes*5);
+        displayMessage(priceMessage);
     }
 
     /**
@@ -61,8 +61,13 @@ public class MainActivity extends AppCompatActivity {
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
     }
 
-
-
+    /**
+     * This method displays the given text on the screen.
+     */
+    private void displayMessage(String message){
+        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        priceTextView.setText(message);
+    }
 
 
 }
